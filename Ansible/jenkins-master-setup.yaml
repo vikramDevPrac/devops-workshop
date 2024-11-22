@@ -8,8 +8,8 @@
       state: present
   - name: add jenkins repo
     apt_repository: 
-    repo: 'deb https://pkg.jenkins.io/debian-stable binary/'
-    state: present
+      repo: 'deb https://pkg.jenkins.io/debian-stable binary/'
+      state: present
   - name: install java
     apt:
       name: openjdk-17-jre
