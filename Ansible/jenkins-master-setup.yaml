@@ -2,6 +2,9 @@
 - hosts: jenkins-master
   become: true
   tasks:
+  - name: Update apt cache
+    apt:
+      update_cache: yes
   - name: add jenkins key
     apt_key:
       url: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
